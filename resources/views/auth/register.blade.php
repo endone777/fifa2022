@@ -40,6 +40,24 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="platform" class="col-md-4 col-form-label text-md-end">{{ __('Platform') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="platform" id="platform" class="form-control">
+                                    <option value="1">PC</option>
+                                    <option value="2">Playstation</option>
+                                    <option value="3">XBOX</option>
+                                </select>
+                                @error('platform')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('platform');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->float('elo_rating');
+            $table->float('elo_rating')->default((int)1000);
             $table->rememberToken();
             $table->timestamps();
         });
